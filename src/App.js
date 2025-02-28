@@ -9,7 +9,7 @@ function App() {
       </div>
       <footer>
         Coded by{" "}
-        <a href='#' target='blank_'>
+        <a href='https://github.com/cmvce' target='blank_'>
           Coleene Acevedo
         </a>
       </footer>

@@ -2,6 +2,10 @@
   margin: 0 auto;
 }
 
+.App .container {
+  text-align: center;
+}
+
 .App footer {
   text-align: center;
 }
