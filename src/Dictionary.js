@@ -1,36 +1,37 @@
 import React, { useState } from "react";
-import "./Dictionary.css";
 import axios from "axios";
 import Results from "./Results";
-export default function Dictionary() {
-  const [keyword, setKeyword] = useState("");
+import "./Dictionary.css";
+export default function SearchEngine() {
+  const [word, setWord] = useState("");
   const [results, setResults] = useState(null);
 
-  function getWord(response) {
-    setResults(response.data.meanings);
+  function getResponse(response) {
+    console.log(response.data);
+    setResults(response.data);
   }
 
   function search(event) {
     event.preventDefault();
-    const key = "80oc158tb64caae306c6eb4bf7cef14f";
-    const url = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${key}`;
-    axios.get(url).then(getWord);
+
+    const url = `https://api.shecodes.io/dictionary/v1/define?word=${word}&key=80oc158tb64caae306c6eb4bf7cef14f`;
+    axios.get(url).then(getResponse);
   }
 
-  function updateKeyword(event) {
-    setKeyword(event.target.value);
+  function updateWord(event) {
+    setWord(event.target.value);
   }
 
   return (
     <div className='Dictionary'>
       <form onSubmit={search}>
         <input
-          type='search'
-          autoFocus={true}
-          placeholder='Search a word....'
-          onChange={updateKeyword}
+          type='text'
+          placeholder='Search a word... '
+          onChange={updateWord}
+          autoFocus='true'
+          className='form-control w-50'
         />
-        <button className='btn'>Search</button>
       </form>
       <Results results={results} />
     </div>

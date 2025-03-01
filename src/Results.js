@@ -1,15 +1,16 @@
 import React from "react";
-import Meanings from "./Meanings";
-
+import Meaning from "./Meaning";
 export default function Results(props) {
-  if (props.results) {
+  if (props.results && props.results.meanings) {
     return (
       <div className='Results'>
-        <h2>{props.results.word}</h2>
+        <h2>
+          {props.results.word} - {props.results.phonetic}
+        </h2>
         {props.results.meanings.map(function (meaning, index) {
           return (
             <div key={index}>
-              <Meanings meaning={meaning} />
+              <Meaning meaning={meaning} />
             </div>
           );
         })}

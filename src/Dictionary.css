@@ -1,3 +1,8 @@
-.Dictionary .btn {
-  background-color: green;
+.Dictionary {
+  text-align: center;
+  padding: 10px;
+}
+
+.form-control {
+  margin: 0 auto;
 }
