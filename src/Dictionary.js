@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
 import "./Dictionary.css";
@@ -7,13 +7,12 @@ export default function Dictionary(props) {
   const [results, setResults] = useState(null);
   const [loaded, setLoaded] = useState(false);
   function getResponse(response) {
-    console.log(response.data);
     setResults(response.data);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    search();
+    search(); // eslint-disable-next-line
   }
 
   function search() {
