@@ -3,6 +3,17 @@
   padding: 10px;
 }
 
-.form-control {
+.Dictionary .form-control {
   margin: 0 auto;
+  padding: 10px 5px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.Dictionary section {
+  padding: 20px;
+}
+
+.Dictionary .suggestion {
+  opacity: 60%;
+  text-align: start;
 }

@@ -1,0 +1,8 @@
+.Results .word {
+  background-color: rgba(167, 202, 233, 0.59);
+  border-radius: 10px;
+  letter-spacing: 8px;
+  font-style: italic;
+  padding: 30px;
+  width: 100%;
+}
